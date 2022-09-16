@@ -2,15 +2,18 @@
     {
         "name": "Tigre de Bengala",
         "info": "botella Moet con Bengala",
-        "price": 20
+        "price": 20,
+        "image":"https://bengalasparabotellas.es/wp-content/uploads/2019/08/08-4c8bc154292f0f247f7808932eac6f4e.jpg"
     },
     {
         "name": "Corona party",
         "info": "Cubo de 5 coronitas",
-        "price": 10
+        "price": 10,
+        "image":"https://sc02.alicdn.com/kf/HTB18zkGPFXXXXaXaXXXq6xXFXXXc/Food-grade-corona-metal-beer-ice-bucket.jpg"
     },
     {
         "info": "Botella de absenta con agua",
-        "price": 40
+        "price": 40,
+        "image":"https://www.gourmet4life.com/image0428/fd/fd67de1be9941227d4d8c6d21c514fb2.jpg"
     }
 ]
