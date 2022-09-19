@@ -39,8 +39,7 @@ export class ProductItem extends Component {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button className="button1" variant="contained" size="small" onClick={this.props.delete}>Borrar</Button>
-
+          <Button sx={{ backgroundColor: 'green' }} variant="contained" size="small" onClick={this.props.delete}>Borrar</Button>
         </CardActions>
       </Card>
 
