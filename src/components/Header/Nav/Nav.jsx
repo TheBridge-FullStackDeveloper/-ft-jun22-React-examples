@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 class Nav extends Component {
   render() {
-    return <nav>
+    return <nav className="nav-bar">
       <Link to="/">Home</Link>
       <Link to="/products">Products</Link>
       <Link to="/staff">Staff</Link>

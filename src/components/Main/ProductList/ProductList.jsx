@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import ProductItem from './ProductItem'
 import data from './products.json'
+import Button from '@mui/material/Button';
 
 export class ProductList extends Component {
 
@@ -54,10 +55,10 @@ export class ProductList extends Component {
     //... fetch POST al back
     //...
     alert("Sugerencia enviada: " + this.state.suggestion);
-    
+
     // Vaciar input + state
-    this.suggestion.current.value="";
-    this.setState({ suggestion:""});
+    this.suggestion.current.value = "";
+    this.setState({ suggestion: "" });
   }
   handleChange = () => {
     const suggestion = this.suggestion.current.value; //Leer campo por referencia
@@ -72,29 +73,29 @@ export class ProductList extends Component {
     //   {info:"Botella de absenta con agua",price:40}
     // ]
     return (
-      <section>
+      <section className="product-list">
         <h1>Añadir producto</h1>
         <form onSubmit={this.addProduct}>
-          <label htmlFor="name">Nombre:</label><br />
-          <input type="text" id="name" name="name" /><br />
-          <label htmlFor="info">Info:</label><br />
-          <input type="text" id="info" name="info" /><br />
-          <label htmlFor="price">Precio:</label><br />
-          <input type="number" id="price" name="price" /><br />
-          <label htmlFor="image">URL imágen:</label><br />
-          <input type="url" id="image" name="image" ref={this.image} /><br />
-          <input type="submit" value="Añadir" />
+          <label htmlFor="name">Nombre:</label>
+          <input type="text" id="name" name="name" />
+          <label htmlFor="info">Info:</label>
+          <input type="text" id="info" name="info" />
+          <label htmlFor="price">Precio:</label>
+          <input type="number" id="price" name="price" />
+          <label htmlFor="image">URL imágen:</label>
+          <input type="url" id="image" name="image" ref={this.image} />
+          <Button variant="contained" type="submit" value="Añadir" >Añadir</Button>
         </form>
 
         <h1>Productos para la fiesta</h1>
         {this.paintProducts()}
 
         {this.state.products.length ?
-          <button onClick={this.deleteProducts}>Borrar productos</button>
+          <Button variant="contained" onClick={this.deleteProducts}>Borrar productos</Button>
           : ""}
 
-        <button onClick={this.addProduct}>Añadir producto</button>
-        <button onClick={this.resetProducts}>Recargar productos</button>
+        <Button variant="contained" onClick={this.addProduct}>Añadir producto</Button>
+        <Button variant="contained" onClick={this.resetProducts}>Recargar productos</Button>
 
         {/* {products.map(product=><ProductItem data={product}/>)} */}
 
@@ -107,8 +108,8 @@ export class ProductList extends Component {
             <ProductItem info={"Botella de absenta con agua"} price={40}/> */}
         <div>
           <h1>Tus sugerencias</h1>
-          <input type="text" ref={this.suggestion} onChange={this.handleChange}/>
-          {this.state.suggestion?<button onClick={this.sendMessage}>Enviar</button>:""}
+          <input type="text" ref={this.suggestion} onChange={this.handleChange} />
+          {this.state.suggestion ? <Button variant="contained" onClick={this.sendMessage}>Enviar</Button> : ""}
         </div>
       </section>
     )
