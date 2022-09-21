@@ -13,7 +13,7 @@ import Topics from './Topics';
 export class Main extends Component {
   render() {
     return (
-      <main>
+      <main className="main">
         <Routes>
           <Route element={<About />} path={"/about"} />
           <Route element={<Contact />} path={"/contact"} />

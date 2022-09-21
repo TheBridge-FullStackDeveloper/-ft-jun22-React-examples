@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Button from '@mui/material/Button';
 
 //rfce
 function Donations() {
@@ -34,21 +35,23 @@ function Donations() {
   }
 
   return (
-    <section>
+    <section className="donations">
       <h1>Donaciones</h1>
-      
+
       <h3>Cantidad: {count}</h3>
-      <button name='add' onClick={handleAddClick} >+</button>
-      <button name='sub' onClick={handleSubClick} >-</button>
+      <div>
+        <Button name='sub' onClick={handleSubClick} variant="contained" >-</Button>
+        <Button name='add' onClick={handleAddClick} variant="contained" >+</Button>
+      </div>
 
       <h3>Datos de la donación:</h3>
       <form onSubmit={handleSubmit}>
         <label htmlFor="email">Email</label>
         <input name="email" type="text" onChange={handleChange}></input>
-        <br/><br/>
+        <br /><br />
         <label htmlFor="product">Producto donado</label>
         <input name="product" type="text" onChange={handleChange}></input>
-        <button>Enviar donación</button>
+        <Button variant="contained">Enviar donación</Button>
       </form>
 
       <h4>Email: {values.email} Producto:{values.product} Total donaciones: {count}</h4>

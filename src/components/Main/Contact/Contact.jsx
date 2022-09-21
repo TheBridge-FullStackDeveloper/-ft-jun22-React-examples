@@ -18,7 +18,7 @@ class Contact extends Component {
     const email = event.target.email.value;
     const comment = event.target.comment.value;
 
-    const contact = {name, email, comment}; //datos de contacto
+    const contact = { name, email, comment }; //datos de contacto
     // Enviar POST
     this.createContact(contact);
   }
@@ -38,7 +38,7 @@ class Contact extends Component {
     // Añade el ID de lo enviado a contact
     contact["id"] = data.id;
 
-    this.setState({contact});// actualizar estado
+    this.setState({ contact });// actualizar estado
     alert(`Mensaje enviado de: ${contact.email} con ID: ${contact.id}`);
   }
 
@@ -52,11 +52,12 @@ class Contact extends Component {
         <input type="email" id="email" name="email" />
         <label htmlFor="comment">Comentarios:</label>
         <textarea id="comment" name="comment" rows="4" cols="29"></textarea>
-
-        <Button variant="contained" type="submit" value="Añadir">Añadir</Button>
+        <div>
+          <Button variant="contained" type="submit" value="Añadir">Añadir</Button>
+        </div>
       </form>
 
-      {this.state.contact.email?<p>Contacto enviado de:{this.state.contact.email} con ID:{this.state.contact.id}</p>:null}
+      {this.state.contact.email ? <p>Contacto enviado de:{this.state.contact.email} con ID:{this.state.contact.id}</p> : null}
     </section>;
   }
 }

@@ -1,0 +1,10 @@
+@import '../utils/mixins.scss';
+
+.donations {
+    @include column-centered-content;
+    &>form{
+        @include column-centered-content;
+        gap:10px;
+    }
+
+}

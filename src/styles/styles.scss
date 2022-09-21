@@ -1,9 +1,13 @@
 @import './views/app';
 
+@import './components/Contact';
+@import './components/Donations';
+@import './components/Footer';
+@import './components/Header';
+@import './components/Home';
+@import './components/Main';
 @import './components/Nav';
 @import './components/ProductList';
 @import './components/ProductItem';
-@import './components/Home';
-@import './components/Contact';
 
 @import './elements/button';
