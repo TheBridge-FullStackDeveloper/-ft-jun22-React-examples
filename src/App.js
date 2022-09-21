@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 
 import '../src/styles/styles.scss'
 
-import {userContext} from './context/userContext'; // contexto
+import { userContext } from './context/userContext'; // contexto
 
 
 function App() {
@@ -32,9 +32,9 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <userContext.Provider value={data}>
-        <Header />
-        <Main />
+        <userContext.Provider value={data}>
+          <Header />
+          <Main />
         </userContext.Provider>
       </BrowserRouter>
       <Footer />
