@@ -1,11 +1,22 @@
 @import '../utils/variables.scss';
-@import '../utils//mixins.scss';
+@import '../utils/mixins.scss';
 
-.footer{
+%footer-bar-basic{
     display:flex;
     justify-content: center;
     align-items: center;
     min-height:15vh;
-    background-color:$granate;
     color:white;
 }
+
+.footer{
+    @extend %footer-bar-basic;
+    background-color:$granate;
+}
+
+.footer__dark{
+    @extend %footer-bar-basic;
+    background-color: $purple;
+}
+
+
