@@ -37,7 +37,7 @@ class Home extends Component {
 
   render() {
     return <div>
-      <h1>Welcome to the party</h1>
+      <h1>Welcome to the party!</h1>
       <img src={party_img} className="party_img" alt="party"/>
 
       <div>

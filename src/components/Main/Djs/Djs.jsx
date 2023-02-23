@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import {Orbitals} from 'react-spinners-css';
 import useFetch from '../../../hooks/useFetch';
 function Djs() {
-  const [pokemons, setPokemons] = useState([]);
-
-
   const {loading,result} = useFetch('https://pokeapi.co/api/v2/pokemon');
   console.log(result.results);
 
@@ -21,7 +19,7 @@ function Djs() {
   return (
     <section>
       <h1>DJs residentes</h1>
-      {loading?"":result.results.map((pokemon) => <h3>{pokemon.name}</h3>)}
+      {loading?<><Orbitals color="#2e2836" size={1000} /><br/>Cargando...</>:result.results.map((pokemon) => <h3>{pokemon.name}</h3>)}
 
     </section>
 
